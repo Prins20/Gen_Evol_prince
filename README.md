@@ -1,7 +1,12 @@
-# Gen_Evol_prince
-una colección de códigos para la clase de geonómica evolutiva
+# INSTALAR SRA-TOOLS
 ```r
-mkdir genomas ;
-grep ">" genomas.fasta;
+PASO 1
+https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit
+PASO 2
+wget https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit
+PASO 3
+Chmod 777 stk.tar.gz
+PASO 4
+export PATH=$PATH:$PWD/sratoolkit.3.0.10-ubuntu64/bin
 ls;
 ```
