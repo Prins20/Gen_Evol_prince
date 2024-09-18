@@ -15,6 +15,6 @@ paso 6: todos los archivos en SRA a FASTQ, separando las lecturas paired-end en 
 fasterq-dump --split-files *.sra
 paso 7: comprime los archvios fastq
 gzip *fastq 
-paso 8
+paso 8: 
 fastqc *
 ```
