@@ -80,8 +80,20 @@ prefix=$(basename $r1 .fa)
 prokka --cpus 4 $r1 -o ${prefix} --prefix ${prefix} --kingdom Viruses ; 
 mv ${prefix}/*.gff annotation/${prefix}.gff
 done ;
+
 conda deactivate ;
 cp */*.ffn ffn/ ; 
 ls ; 
 ```
 
+# Instalar Prokka
+```r
+#creamos el ambiente
+conda create -n prokka-env
+#activamos
+conda activate
+#instalr prokka dentro del ambiente
+sudo apt install prokka
+#ver si esta prokka
+prokka -h
+```
