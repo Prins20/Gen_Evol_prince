@@ -97,3 +97,50 @@ sudo apt install prokka
 #ver si esta prokka
 prokka -h
 ```
+# CLase 7: ensamblaje con nanopore
+
+```r
+# 7.1 : instalar los programas
+# 7.1.1 : NanoPlot : calidad de secuencias Nanopore
+conda activate base
+pip install NanoPlot
+pip install NanoPlot --upgrade
+# 7.1.2 : Nanofilt : Filtrado por calidad de lecturas Nanopore
+pip install nanofilt
+pip install nanofilt --upgrade
+# 7.1.3 : Flye: de-novo assembly
+git clone https://github.com/fenderglass/Flye
+cd Flye
+python setup.py install
+
+
+ 7.1.4 : Minimap2 : polishing (parte 1)
+git clone https://github.com/lh3/minimap2
+cd minimap2 && make
+
+# 7.1.5 : Racon : polishing (parte 2)# correr linea por linea
+git clone --recursive https://github.com/lbcb-sci/racon.git racon
+cd racon
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+sudo apt  install cmake
+make
+cd build/bin/ 
+export PATH=$PATH:$HOME/bin
+cp racon $HOME/bin
+chmod +x $HOME/bin/racon
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
