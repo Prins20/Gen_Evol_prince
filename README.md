@@ -124,7 +124,7 @@ cd racon
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
-sudo apt  install cmake
+ sudo apt  install cmake #solo si te lo piden#
 make
 cd build/bin/ 
 export PATH=$PATH:$HOME/bin
