@@ -18,9 +18,11 @@ PASO 5 : Verificar que estea el programa
 fastq-dump --version
 prefetch --version
 
- OTRO :forma de descarga
+
+ # OTRO :Forma de descarga
  paso 1: Instalar, programa
  sudo apt install sra-toolkit
+
  paso 2: Verificar que estea el programa
  fastq-dump --version
  prefetch --version
