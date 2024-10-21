@@ -19,7 +19,7 @@ fastq-dump --version
 prefetch --version
 
 
- # OTRO :Forma de descarga
+ # OTRO :Forma de descarga sra-toolkit
  paso 1: Instalar, programa
  sudo apt install sra-toolkit
 
@@ -27,15 +27,22 @@ prefetch --version
  fastq-dump --version
  prefetch --version
 ```
+
+```r
 # Descargar archivo .sra y dividirlo en dos archivos .fastq
-
-prefetch -h 
-prefetch --max-size 50G --option-file sra_accessions_1.txt  #;
-rm -r ERR12389866/ ERR12543675/  ##Borrar las carpetas pero con cuidado
-fasterq-dump --split-files *.sra #separar en forward y reverse;
-gzip *fastq ;
-fastqc *
-
+paso 1: Llamar al programa
+prefetch -h
+paso 2: Descargar datos SRA con un tamaño maximo de 50G
+prefetch --max-size 50G --option-file sra_accessions_1.txt
+paso 3: Eliminar las carpetas
+rm -r ERR12389866/ ERR12543675/
+paso 4: Convertir lo sarchivos SRA a FASTQ, separar el forward y reverse
+fasterq-dump --split-files *.sra
+paso 5: Comprimir los FASTQ generados
+gzip *fastq
+paso 6: realizar control de calidad de  FASTQ 
+fastqc *fastq.gz
+```
 
 # Ensamblaje por mapeo
 
