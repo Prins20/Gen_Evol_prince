@@ -14,6 +14,16 @@ Chmod 777 stk.tar.gz
 PASO 4:Añadimos la ruta al directorio y el archivo lo llevamos al bin
 export PATH=$PATH:$PWD/sratoolkit.3.1.1-ubuntu64/bin
 
+PASO 5 : Verificar que estea el programa
+fastq-dump --version
+prefetch --version
+
+OTRO
+paso 1: Instalar, programa
+sudo apt install sra-toolkit
+paso 2: Verificar que estea el programa
+fastq-dump --version
+prefetch --version
 ```
 # Descargar archivo .sra y dividirlo en dos archivos .fastq
 
