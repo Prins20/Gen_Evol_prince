@@ -1,6 +1,6 @@
 # GENOMICA EVOLUTIVA
 Coleccion de codigos
-# Descargar sratoolkit 
+# Descargar Genomas - (sratoolkit )
 ```r
 PASO 1 : obtener el link de descarga
 https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit
