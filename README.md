@@ -1,6 +1,6 @@
 # GENOMICA EVOLUTIVA
 Coleccion de codigos
-# Descargar Genomas - (sratoolkit )
+# Descargar Genomas - (sratoolkit ) - CODIGO 1
 ```r
 PASO 1 : obtener el link de descarga
 https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit
@@ -29,7 +29,7 @@ prefetch --version
 ```
 
 ```r
-# Descargar archivo .sra y dividirlo en dos archivos .fastq
+# Descargar archivo .sra y dividirlo en dos archivos .fastq - CODIGO 2
 paso 1: Llamar al programa
 prefetch -h
 paso 2: Descargar datos SRA con un tamaño maximo de 50G
@@ -44,7 +44,7 @@ paso 6: realizar control de calidad de  FASTQ
 fastqc *fastq.gz
 ```
 
-# Ensamblaje por mapeo
+# Ensamblaje por mapeo - CODIGO 3
 
 ```r
 ##Tratar de que todos los archivos descargados Fastq, referencia, sam y los indexados esten dentro de una misma carpeta
@@ -82,12 +82,21 @@ ls ;
 for r1 in *bam
 do
 prefix=$(basename $r1 .bam)
+
 #2#estimate Ns#
 samtools mpileup -aa -A -d 0 -Q 0 $r1 | ivar consensus -p ${prefix}.fasta -q 25 -t 0.6 -m 10 ;
 done ; 
 ls ;
 
-#5# annotation #
+
+
+#  Intalar y correr PROKKA-CODIGO 4
+# instalacion de Prokka #
+conda create -n prokka_env ;
+conda activate prokka_env ;
+conda install -c conda-forge -c biocondaconda install conda-forge::r-base prokka ;
+
+# analisis en Prokka# 
 mkdir -p annotation ;
 mkdir -p ffn ;
 for r1 in *fa
@@ -97,11 +106,17 @@ prokka --cpus 4 $r1 -o ${prefix} --prefix ${prefix} --kingdom Viruses ;
 mv ${prefix}/*.gff annotation/${prefix}.gff
 done ;
 
+# instalacion de artemis #
+conda create -n art
+conda activate art
+conda install bioconda::artemis
+```conda install conda-forge::r-base
+
+# desactivar conda #
 conda deactivate ;
 cp */*.ffn ffn/ ; 
 ls ; 
 ```
-
 # Instalar Prokka
 ```r
 #creamos el ambiente
@@ -113,6 +128,8 @@ sudo apt install prokka
 #ver si esta prokka
 prokka -h
 ```
+
+
 # CLase 7: ensamblaje con nanopore
 
 ```r
