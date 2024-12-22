@@ -119,9 +119,9 @@ conda install conda-forge::r-base
 conda deactivate ;
 cp */*.ffn ffn/ ; 
 ls ; 
-```
+
 # Instalar Prokka
-```r
+
 #creamos el ambiente
 conda create -n prokka-env
 #activamos
