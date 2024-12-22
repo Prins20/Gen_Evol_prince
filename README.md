@@ -88,10 +88,11 @@ prefix=$(basename $r1 .bam)
 samtools mpileup -aa -A -d 0 -Q 0 $r1 | ivar consensus -p ${prefix}.fasta -q 25 -t 0.6 -m 10 ;
 done ; 
 ls ;
-
+```
 
 
 #  Intalar y correr PROKKA-CODIGO 4
+```r
 # instalacion de Prokka #
 conda create -n prokka_env ;
 conda activate prokka_env ;
@@ -111,7 +112,8 @@ done ;
 conda create -n art
 conda activate art
 conda install bioconda::artemis
-```conda install conda-forge::r-base
+```
+conda install conda-forge::r-base
 
 # desactivar conda #
 conda deactivate ;
