@@ -177,7 +177,7 @@ explorar
 ```
 
 
-# ensamblaje con nanopore (PROGRAMAS A INTALAR) - CODIGO 7
+# ENSAMBLAJE NANOPORE (PROGRAMAS A INTALAR) - CODIGO 7
 
 ```r
 # 7.1 : instalar los programas
