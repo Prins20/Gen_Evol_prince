@@ -361,6 +361,7 @@ https://services.healthtech.dtu.dk/services/VirtualRibosome-2.0/
 
 ```
 # ORTHO. ANI -CODIGO 10
+```r
 # 10.1: instalar NCBI-DATASETS
 conda create -n ncbi_datasets
 conda activate ncbi_datasets
