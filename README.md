@@ -98,7 +98,7 @@ conda create -n prokka_env ;
 conda activate prokka_env ;
 conda install -c conda-forge -c biocondaconda install conda-forge::r-base prokka ;
 
-# analisis en Prokka# 
+# analisis en Prokka
 mkdir -p annotation ;
 mkdir -p ffn ;
 for r1 in *fa
@@ -112,10 +112,10 @@ done ;
 conda create -n art
 conda activate art
 conda install bioconda::artemis
-```
+
 conda install conda-forge::r-base
 
-# desactivar conda #
+# desactivar conda 
 conda deactivate ;
 cp */*.ffn ffn/ ; 
 ls ; 
