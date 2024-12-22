@@ -226,7 +226,8 @@ pip install medaka
 
 ```
 #ENSAMBLAJE NANOPORE (PIPELINES)-CODIGO 8
-material de apoyo > https://denbi-nanopore-training-course.readthedocs.io/en/stable/index.html
+
+# material de apoyo > https://denbi-nanopore-training-course.readthedocs.io/en/stable/index.html#
 ```r
 # 8.1: descargar la informacion (códigos SRR17110067 y SRR17110070)
 mkdir sra_files ;
