@@ -225,7 +225,7 @@ or
 pip install medaka
 
 ```
-#ENSAMBLAJE NANOPORE (PIPELINES)-CODIGO 8
+# ENSAMBLAJE NANOPORE (PIPELINES)-CODIGO 8
 
 # material de apoyo > https://denbi-nanopore-training-course.readthedocs.io/en/stable/index.html#
 ```r
