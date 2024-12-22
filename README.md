@@ -28,8 +28,9 @@ prefetch --version
  prefetch --version
 ```
 
-```r
+
 # Descargar archivo .sra y dividirlo en dos archivos .fastq - CODIGO 2
+```r
 paso 1: Llamar al programa
 prefetch -h
 paso 2: Descargar datos SRA con un tamaño maximo de 50G
